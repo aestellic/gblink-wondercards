@@ -43,6 +43,9 @@ const SYMBOLS = {
   PLAYER_AVATAR: ['gPlayerAvatar'],
   OBJECT_EVENTS: ['gObjectEvents'],
   DECOMPRESSION_BUFFER: ['gDecompressionBuffer'],
+  UNUSED_BATTLERS_ARRAY: ['sUnusedBattlersArray'],
+  S_UNUSED: ['sUnused'],
+  INTR_MAIN_BUFFER: ['IntrMain_Buffer'],
   // gRfu.sendQueue.count; Japanese Emerald's gRfu is laid out as FireRed's.
   SEND_QUEUE_COUNT: { emerald: ['gRfu', 0xc1a], frlg: ['gRfu', 0x8d2], japanese: { emerald: ['gRfu', 0x8d2] } },
   SELECTED_OBJECT: ['gSelectedObjectEvent'],
@@ -176,6 +179,9 @@ const SYMBOLS = {
   FRONT_OF_PLAYER: ['GetXYCoordsOneStepInFrontOfPlayer', 0, 'fn'],
   FEEBAS_SPOT: { emerald: ['GetFeebasFishingSpotId', 0, 'fn'] },
   CB2_USE_TM_AFTER_FORGETTING: { frlg: ['CB2_UseTMHMAfterForgettingMove', 0, 'fn'] },
+  SAVE_DIALOG_CALLBACK: { emerald: ['sSaveDialogCallback', 0, 'fn'], frlg: ['sSaveDialogCB', 0, 'fn'] },
+  SAVE_DIALOG_NOW_SAVING_TEXT: { emerald: ['SaveSavingMessageCallback', 0, 'fn'], frlg: ['SaveDialogCB_PrintSavingDontTurnOffPower', 0, 'fn'] },
+
   // the multichoice box (menu.inc)
   CREATE_WINDOW_FROM_RECT: ['CreateWindowFromRect', 0, 'fn'],
   WINDOW_BORDER: { emerald: ['SetStandardWindowBorderStyle', 0, 'fn'], frlg: ['SetStdWindowBorderStyle', 0, 'fn'] },

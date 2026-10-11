@@ -2158,6 +2158,41 @@ const CARDS = [
       playText: 'Heh heh, looks like someone\nwants to play roulette.',
     }),
   },
+  {
+    id: 'custom-ace',
+    source: 'ace.s',
+    symbols: { STATE: HOOK_STATE },
+    card: {
+      flagId: 1066, idNumber: 66, iconSpecies: 137, bgType: 3,
+      title: 'PERSISTENT ACE',
+      subtitle: 'woag',
+      body: ['technology is incredible!', 'this is a test.', ...VISIT],
+      footer: FOOTER,
+    },
+    script: {
+      body: [
+        ...compareAddrToValue(HOOK_STATE, 1), ...vgotoIf(EQ, 'active'),
+        ...vmessage('ask_text'), ...waitmessage(), ...yesnobox(),
+        ...compareVarToValue(VAR_RESULT, 0), ...vgotoIf(EQ, 'declined'),
+        ...native('install'),
+        ...say('on_text'),
+        { define: 'active' },
+        ...vmessage('keep_text'), ...waitmessage(), ...yesnobox(),
+        ...compareVarToValue(VAR_RESULT, 1), ...vgotoIf(EQ, 'declined'),
+        ...native('uninstall'),
+        ...say('off_text'),
+        { define: 'declined' },
+        ...say('declined_text'),
+      ],
+      texts: {
+        ask_text: 'Shall I enable\npersistent ACE?',
+        on_text: 'Done! Try to save\nand reset!',
+        keep_text: 'Persistent ACE is.\non. Keep it on?',
+        off_text: 'Done! No more\npersistent ACE.',
+        declined_text: 'Come back any time!',
+      },
+    },
+  },
 ];
 
 // struct WonderCard: flag, icon, number, background, then from byte 10 the

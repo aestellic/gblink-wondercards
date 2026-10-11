@@ -510,6 +510,16 @@ export const JAPANESE = {
   'Heh heh, looks like someone\nwants to play roulette.': 'へへ　だれか\nルーレットで　あそびたいようだね',
   'I will take the COIN CASE back.\nYour COINS stay with you.': 'コインケースは　かえしてもらうね\nコインは　そのまま　どうぞ',
   'Your BAG is full.': 'バッグが　いっぱいです',
+
+    // ---- Persistent ACE
+  'PERSISTENT ACE': 'TEMP',
+  'woag': 'TEMP',
+  'technology is incredible!\nthis is a test.\nVisit the deliveryman on 2F\nof a POKéMON CENTER.': 'TEMP\n\n\n',
+  'Shall I enable\npersistent ACE?': 'TEMP',
+  'Done! Try to save\nand reset!': 'TEMP',
+  'Persistent ACE is.\non. Keep it on?': 'TEMP',
+  'Done! No more\npersistent ACE.': 'TEMP',
+  'Come back any time!': 'TEMP',
 };
 
 // ---- the event Pokémon cards

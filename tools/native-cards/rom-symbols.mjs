@@ -181,7 +181,10 @@ const SYMBOLS = {
   CB2_USE_TM_AFTER_FORGETTING: { frlg: ['CB2_UseTMHMAfterForgettingMove', 0, 'fn'] },
   SAVE_DIALOG_CALLBACK: { emerald: ['sSaveDialogCallback', 0, 'fn'], frlg: ['sSaveDialogCB', 0, 'fn'] },
   SAVE_DIALOG_NOW_SAVING_TEXT: { emerald: ['SaveSavingMessageCallback', 0, 'fn'], frlg: ['SaveDialogCB_PrintSavingDontTurnOffPower', 0, 'fn'] },
-
+  GET_OBJEVENT_BY_ID: ['GetObjectEventIdByLocalId', 0, 'fn'],
+  GET_OBJEVENT_BASE_TEMPLATE: ['GetBaseTemplateForObjectEvent', 0, 'fn'],
+  // event scripts
+  EXAMPLE_SCRIPT: { frlg: ['BirthIsland_Exterior_EventScript_Deoxys', 0], emerald: ['FarawayIsland_Interior_EventScript_Mew', 0] },
   // the multichoice box (menu.inc)
   CREATE_WINDOW_FROM_RECT: ['CreateWindowFromRect', 0, 'fn'],
   WINDOW_BORDER: { emerald: ['SetStandardWindowBorderStyle', 0, 'fn'], frlg: ['SetStdWindowBorderStyle', 0, 'fn'] },
